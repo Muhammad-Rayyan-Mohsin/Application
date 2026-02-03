@@ -2,19 +2,41 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Application - Muhammad Rayyan Mohsin Portfolio
 
-This contains everything you need to run your app locally.
+A high-performance, modern portfolio landing page built with React, Vite, and Tailwind CSS. This application showcases AI engineering expertise and professional capabilities.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1uQhWIQkqWq9wHA9PPSSVpsg7_Qv1iIUg
+## Features
+
+- Modern, responsive design with Tailwind CSS
+- Smooth scrolling navigation
+- Interactive UI components
+- Animated background gradients
+- Mobile-optimized layout
+- Built with React 19 and TypeScript
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+   ```bash
+   npm install
+   ```
+   or with bun:
+   ```bash
+   bun install
+   ```
+
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key (optional for current features)
+
 3. Run the app:
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
+   or:
+   ```bash
+   bun run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
