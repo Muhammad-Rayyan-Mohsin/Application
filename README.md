@@ -83,11 +83,42 @@ The production build is optimized with:
 
 The `dist/` directory contains the production-ready static files. Deploy to any static hosting service:
 
-- **Vercel**: `npm run build` → Push to GitHub → Auto-deploy
+### **Vercel (Recommended)**
+
+The easiest way to deploy this app:
+
+1. Push your code to GitHub:
+   ```bash
+   git push origin main
+   ```
+
+2. Import on Vercel:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Add New" → "Project"
+   - Select your GitHub repository
+   - Vercel auto-detects the build settings from `vercel.json`
+   - Add environment variable `GEMINI_API_KEY` (optional)
+   - Click "Deploy"
+
+3. Your app is live! Vercel provides:
+   - Automatic deployments on git push
+   - Preview deployments for pull requests
+   - CDN acceleration globally
+   - SSL certificate included
+   - Automatic cache optimization
+
+**Vercel Configuration:**
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Environment Variables: Auto-configured in `vercel.json`
+
+### **Other Deployment Options**
+
 - **Netlify**: Connect GitHub repo → Auto-build on push
 - **GitHub Pages**: `npm run build` → Push `dist/` to `gh-pages` branch
 - **AWS S3 + CloudFront**: `npm run build` → Upload `dist/` folder
 - **Traditional Server**: Copy `dist/` contents to web server
+
 
 ## Environment Variables
 
