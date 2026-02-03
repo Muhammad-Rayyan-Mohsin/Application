@@ -25,24 +25,24 @@ export const Hero: React.FC = () => {
           </span>
         </div>
 
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[1.1] text-white">
-          Hello Osamah,<br className="hidden md:block" />
-          I Am <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600 italic px-2">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[1.15] sm:leading-[1.1] text-white">
+          Hello Osamah,<br className="hidden sm:block" />
+          I Am <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600 italic px-1 sm:px-2">
             Muhammad Rayyan.
           </span>
-          <br className="hidden md:block" />
+          <br className="hidden sm:block" />
           The Engineer You Need.
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
           I know you've had poor experiences finding the right talent. I built this page to prove I am different. 
           I am the "kickass" individual ready to scale your high-performance websites.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 w-full px-2 sm:px-0">
           <Button 
             size="lg" 
-            className="group text-base px-8 h-14"
+            className="group text-base px-6 sm:px-8 h-14 w-full sm:w-auto min-h-[56px] touch-manipulation"
             onClick={() => document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth'})}
           >
             Let's Talk Business
@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="h-14 px-8 border-zinc-700"
+            className="h-14 px-6 sm:px-8 border-zinc-700 w-full sm:w-auto min-h-[56px] touch-manipulation"
             onClick={() => window.open('https://www.linkedin.com/in/rayyan-mohsin-216713331/', '_blank')}
           >
             View My Profile
@@ -59,24 +59,24 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Feature Ticks */}
-        <div className="pt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-zinc-500 font-medium">
-          <div className="flex flex-col items-center gap-2">
-             <div className="p-2 bg-zinc-900 rounded-lg border border-zinc-800">
-                <Zap className="w-5 h-5 text-primary" />
+        <div className="pt-10 sm:pt-16 grid grid-cols-3 gap-3 sm:gap-8 text-xs sm:text-sm text-zinc-500 font-medium px-2 sm:px-0">
+          <div className="flex flex-col items-center gap-2 text-center">
+             <div className="p-2 sm:p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+                <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
              </div>
-             <span>Full-Stack AI Integration</span>
+             <span className="leading-tight">Full-Stack AI<br className="sm:hidden" /> Integration</span>
           </div>
-          <div className="flex flex-col items-center gap-2">
-             <div className="p-2 bg-zinc-900 rounded-lg border border-zinc-800">
-                <TrendingUp className="w-5 h-5 text-primary" />
+          <div className="flex flex-col items-center gap-2 text-center">
+             <div className="p-2 sm:p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+                <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
              </div>
-             <span>Data-Driven ROI</span>
+             <span className="leading-tight">Data-Driven<br className="sm:hidden" /> ROI</span>
           </div>
-          <div className="flex flex-col items-center gap-2">
-             <div className="p-2 bg-zinc-900 rounded-lg border border-zinc-800">
-                <Cpu className="w-5 h-5 text-primary" />
+          <div className="flex flex-col items-center gap-2 text-center">
+             <div className="p-2 sm:p-3 bg-zinc-900 rounded-lg border border-zinc-800">
+                <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
              </div>
-             <span>Autonomous Agents (n8n)</span>
+             <span className="leading-tight">Autonomous<br className="sm:hidden" /> Agents</span>
           </div>
         </div>
       </div>

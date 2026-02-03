@@ -15,19 +15,19 @@ export const Button: React.FC<ButtonProps> = ({
   children, 
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50";
+  const baseStyles = "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 select-none";
   
   const variants = {
-    default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-    outline: "border border-zinc-700 bg-transparent shadow-sm hover:bg-zinc-800 hover:text-white",
-    ghost: "hover:bg-zinc-800 hover:text-white",
+    default: "bg-primary text-primary-foreground shadow hover:bg-primary/90 active:bg-primary/80",
+    outline: "border border-zinc-700 bg-transparent shadow-sm hover:bg-zinc-800 hover:text-white active:bg-zinc-700",
+    ghost: "hover:bg-zinc-800 hover:text-white active:bg-zinc-700",
     link: "text-primary underline-offset-4 hover:underline",
   };
 
   const sizes = {
-    default: "h-9 px-4 py-2",
-    sm: "h-8 rounded-md px-3 text-xs",
-    lg: "h-12 rounded-md px-8 text-base",
+    default: "h-10 px-4 py-2 min-h-[44px]",
+    sm: "h-9 rounded-md px-3 text-xs min-h-[44px]",
+    lg: "h-12 rounded-md px-8 text-base min-h-[48px]",
   };
 
   return (
@@ -74,7 +74,7 @@ export const Badge: React.FC<{ children: React.ReactNode; className?: string }> 
 
 // Section Wrapper
 export const Section: React.FC<{ children: React.ReactNode; className?: string; id?: string }> = ({ children, className = '', id }) => (
-  <section id={id} className={`py-20 md:py-32 px-4 md:px-8 max-w-7xl mx-auto ${className}`}>
+  <section id={id} className={`py-12 sm:py-20 md:py-32 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto ${className}`}>
     {children}
   </section>
 );
